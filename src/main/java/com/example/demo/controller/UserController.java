@@ -1,9 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.Mapper.UserMapper;
-import com.example.demo.Model.UserDelete;
-import com.example.demo.Model.UserRegister;
-import com.example.demo.Model.UserUpdate;
+import com.example.demo.Model.user.UserDelete;
+import com.example.demo.Model.user.UserRegister;
+import com.example.demo.Model.user.UserUpdate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by kwongiho on 2017. 11. 18..
+ * study for mybatis+mysql
  */
 @RestController
 public class UserController {

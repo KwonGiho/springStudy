@@ -1,8 +1,7 @@
-package com.example.demo.Model;
+package com.example.demo.Model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
@@ -13,9 +12,8 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-public class UserDelete implements User,Serializable{
+public class UserUpdate implements User,Serializable{
     private String id;
     private String password;
-    private Boolean isAgree;
+    private String afterPassword;
 }

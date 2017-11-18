@@ -1,6 +1,6 @@
 package com.example.demo.Mapper;
 
-import com.example.demo.Model.UserRegister;
+import com.example.demo.Model.user.UserRegister;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Service;
 
