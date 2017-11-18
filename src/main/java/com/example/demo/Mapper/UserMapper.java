@@ -19,4 +19,7 @@ public interface UserMapper {
     @Update("update user set password=#{afterPassword} where id=#{id} and password=#{password}")
     int update(@Param("id") String id,@Param("password") String password, @Param("afterPassword") String afterPassword);
 
+    @Delete("delete from user where id=#{id} and password=#{password}")
+    int delete(@Param("id") String id, @Param("password") String password);
+
 }
