@@ -1,4 +1,4 @@
-package com.example.demo.Mapper;
+package com.example.demo.Dao;
 
 import com.example.demo.Model.user.UserRegister;
 import org.apache.ibatis.annotations.*;

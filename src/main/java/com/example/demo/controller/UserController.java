@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.Mapper.UserMapper;
+import com.example.demo.Dao.UserMapper;
 import com.example.demo.Model.user.UserDelete;
 import com.example.demo.Model.user.UserRegister;
 import com.example.demo.Model.user.UserUpdate;
