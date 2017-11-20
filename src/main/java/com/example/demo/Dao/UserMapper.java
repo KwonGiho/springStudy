@@ -2,6 +2,7 @@ package com.example.demo.Dao;
 
 import com.example.demo.Model.user.UserRegister;
 import org.apache.ibatis.annotations.*;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Service;
 
 /**

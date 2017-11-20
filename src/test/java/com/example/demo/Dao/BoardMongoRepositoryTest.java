@@ -65,7 +65,7 @@ public class BoardMongoRepositoryTest {
         boardMongoRepository.save(board);
         BoardSkeleton board2= boardMongoRepository.findByTitle("new1");
         assertNotNull(board2);
-        assertEquals(board2.getBody(), "gihogiho");
+        assertEquals(board2.getBody(), "gihogio");
     }
 
     @After

@@ -1,0 +1,23 @@
+<ehcache>
+    <defaultCache
+            maxElementsMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="60"
+            timeToLiveSeconds="60"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000000-"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="1000"
+            memoryStoreEvictionPolicy="LRU"
+    />
+    <cache name="mongoGetCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           timeToIdleSeconds="60"
+           timeToLiveSeconds="60"
+           eternal="true"
+           diskSpoolBufferSizeMB="20"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off"/>
+
+</ehcache>
