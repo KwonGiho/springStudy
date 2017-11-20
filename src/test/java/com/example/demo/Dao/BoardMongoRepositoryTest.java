@@ -4,8 +4,8 @@ package com.example.demo.Dao;
  * Created by kwongiho on 2017. 11. 19..
  */
 
+import com.example.demo.Model.BoardSkeleton;
 import com.example.demo.Model.Board;
-import com.example.demo.Model.BoardCreate;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,11 +24,11 @@ public class BoardMongoRepositoryTest {
 
     @Before
     public void setUp() throws Exception {
-        Board board1 = new BoardCreate();
+        BoardSkeleton board1 = new Board();
         board1.setTitle("new1");
         board1.setBody("kwongiho");
 
-        Board board2 = new BoardCreate();
+        BoardSkeleton board2 = new Board();
         board2.setTitle("new2");
         board2.setBody("Hiii hello world.");
 
@@ -45,13 +45,13 @@ public class BoardMongoRepositoryTest {
     @Test
     public void testFetchData(){
         /*Test data retrieval*/
-        Board board = boardMongoRepository.findByTitle("new1");
+        BoardSkeleton board = boardMongoRepository.findByTitle("new1");
         assertNotNull(board);
         assertEquals("kwongiho", board.getBody());
         /*Get all products, list should only have two*/
-        Iterable<Board> boards = boardMongoRepository.findAll();
+        Iterable<BoardSkeleton> boards = boardMongoRepository.findAll();
         int count = 0;
-        for(Board b : boards){
+        for(BoardSkeleton b : boards){
             count++;
         }
         assertEquals(count, 2);
@@ -60,10 +60,10 @@ public class BoardMongoRepositoryTest {
     @Test
     public void testDataUpdate(){
         /*Test update*/
-        Board board = boardMongoRepository.findByTitle("new1");
+        BoardSkeleton board = boardMongoRepository.findByTitle("new1");
         board.setBody("gihogio");
         boardMongoRepository.save(board);
-        Board board2= boardMongoRepository.findByTitle("new1");
+        BoardSkeleton board2= boardMongoRepository.findByTitle("new1");
         assertNotNull(board2);
         assertEquals(board2.getBody(), "gihogiho");
     }
